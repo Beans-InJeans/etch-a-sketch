@@ -1,6 +1,6 @@
 const container = document.getElementById('container');
 
-function makeRows(rows, cols) {
+function makeGrid(rows, cols) {
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
 
@@ -10,5 +10,5 @@ function makeRows(rows, cols) {
     };
 };
 
-makeRows(16, 16);
+makeGrid(16, 16);
 
