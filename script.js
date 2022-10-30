@@ -12,3 +12,8 @@ function makeGrid(rows, cols) {
 
 makeGrid(16, 16);
 
+function gridPrompt() {
+    let gridSize = +prompt("Enter grid size in pixels (max 100):");
+    makeGrid(5, 5);
+}
+
