@@ -7,15 +7,14 @@
     display: grid;
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     grid-template-rows: repeat(var(--grid-rows), 1fr);
-    max-height: 70vh;
-    max-width: 70vw;
+    height: 30rem;
+    width: 30rem;
 }
 
 .grid-item {
     padding: 1rem;
     border: 0.5px solid black;
     text-align: center;
-    aspect-ratio: 1 / 1;
     cursor: pointer;
     transition: 0s 180s;
 }
@@ -23,4 +22,13 @@
 .grid-item:hover {
     transition: 0s;
     background-color: tomato;
+}
+
+.grid-btn {
+    border-color: aliceblue;
+    color: black;
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
 }
