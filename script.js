@@ -21,7 +21,7 @@ function removeCurrentGrid() {
     currentGrid.innerHTML = '';
 }
 
-function gridPrompt() {
+function newGrid() {
     let gridSize = +prompt("Enter grid size in pixels (max 100):");
     
     if (gridSize == 0) {
