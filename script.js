@@ -1,6 +1,10 @@
 const container = document.getElementById('container');
 
 function makeGrid(rows, cols) {
+    if (document.getElementsByClassName('grid-item').length > 0) {
+        document.getElementsByClassName('grid-item').remove();
+    }
+
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
 
@@ -12,8 +16,23 @@ function makeGrid(rows, cols) {
 
 makeGrid(16, 16);
 
+function removeCurrentGrid() {
+    let currentGrid = document.getElementById("container");
+    currentGrid.innerHTML = '';
+}
+
 function gridPrompt() {
     let gridSize = +prompt("Enter grid size in pixels (max 100):");
-    makeGrid(5, 5);
-}
+    
+    if (gridSize == 0) {
+        return;
+    } else if (gridSize > 100) {
+        alert("Values over 100 not allowed.");
+        return;
+    } else {
+        removeCurrentGrid();
+        makeGrid(gridSize, gridSize);
+        return;
+    }
+};
 
